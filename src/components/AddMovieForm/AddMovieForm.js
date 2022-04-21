@@ -20,9 +20,15 @@ function AddMovieForm(props) {
    * - PROBLEM: 1 ERROR 1 STATE.
    * - TODO: REFACTOR SEMUA ERROR JADI 1 STATE.
    */
-  const [isTitleError, setIsTitleError] = useState(false);
-  const [isDateError, setIsDateError] = useState(false);
-  const [isPosterError, setIsPosterError] = useState(false);
+  // const [isTitleError, setIsTitleError] = useState(false);
+  // const [isDateError, setIsDateError] = useState(false);
+  // const [isPosterError, setIsPosterError] = useState(false);
+
+  const[formError,setFormError] = useState({
+    isTitleError:false,
+    isDateError:false,
+    isPosterError:false
+  });
 
   function handleChange(e) {
     // Destructing name dan value.
