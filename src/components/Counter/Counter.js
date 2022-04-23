@@ -1,29 +1,29 @@
-// Import useState dari React (desctructing).
-import { useState } from "react";
+import {useEffect,useState} from "react";
+function Counter(){
 
-function Counter() {
-  /**
-   * Membuat state menggunakan useState dan set nilai awal 0
-   * useState mengembalikan 2 nilai:
-   * - Berisi current value: result.
-   * - Berisi fungsi untuk mengupdate result: setResult.
-   * Melakukan destructing array dari hasil useState
-   */
-  const [result, setResult] = useState(0);
+  const [angka ,setAngka] = useState(0)
 
-  function handleClick() {
-    /**
-     * Update state result menggunakan fungsi setResult
-     */
-    setResult(result + 1);
+  function addAngka(){
+    
+    console.log(angka);
+    setAngka(angka +1);
   }
+  function updateDOM(){
+    console.log("lifestyle Dimount");
+    document.title = `hasil ${angka}`;
 
-  return (
+  }
+  useEffect(function(updateDOM){
+   
+  },[angka]);
+  console.log("lifestyle dirender");
+  
+
+  return(
     <div>
-      <p>Result: {result} </p>
-      <button onClick={handleClick}>Add</button>
+      <p>hasil :${angka}</p>
+      <button onClick={addAngka}>Add</button>
     </div>
-  );
+  )
 }
-
 export default Counter;

@@ -24,19 +24,19 @@ function Navbar() {
            */}
           <ul className={styles.navbar__list}>
             <li className={styles.navbar__item}>
-              <Link to="/">Home</Link>
+              <Link className="style.navbar__link" to="/">Home</Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/create">Add Movie</Link>
+              <Link  className="style.navbar__link" to="/movie/create">Add Movie</Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/popular">Popular</Link>
+              <Link  className="style.navbar__link" to="/movie/popular">Popular</Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/diam">Now Playing</Link>
+              <Link  className="style.navbar__link" to="/diam">Now Playing</Link>
             </li>
             <li className={styles.navbar__item}>
-              <Link to="/movie/top">Top Rated</Link>
+              <Link  className="style.navbar__link" to="/movie/top">Top Rated</Link>
             </li>
           </ul>
         </div>
